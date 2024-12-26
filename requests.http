@@ -1,0 +1,32 @@
+### GET /
+
+GET http://localhost:3000/ HTTP/1.1
+
+### GET /items
+
+GET http://localhost:3000/tasks HTTP/1.1
+
+### POST /items
+
+POST http://localhost:3000/tasks HTTP/1.1
+Content-Type: application/json
+
+{
+    "title": "Task 3",
+    "completed": false
+}
+
+### PUT /items/:id
+
+PUT http://localhost:3000/tasks/df522a83-67eb-4b24-b3a1-e420b44a6c94 HTTP/1.1
+Content-Type: application/json
+
+{
+    
+    "title": "test",
+    "completed": false
+}
+
+### DELETE /items/:id
+
+DELETE http://localhost:3000/tasks/1 HTTP/1.1
