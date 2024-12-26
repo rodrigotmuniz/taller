@@ -23,7 +23,7 @@ app.get('/tasks', (req, res) => {
 app.post('/tasks', (req, res) => {
   const { title, completed } = req.body
   if (!isTitleValid(title)) return res.send('Title is invalid!')
-  if (!isCompletedValid(title)) return res.send('Completed is invalid!')
+  if (!isCompletedValid(completed)) return res.send('Completed is invalid!')
 
   const newId = counter++
   const element = {
@@ -40,7 +40,7 @@ app.put('/tasks/:id', (req, res) => {
 
   const { title, completed } = req.body
   if (!isTitleValid(title)) return res.send('Title is invalid!')
-  if (!isCompletedValid(title)) return res.send('Completed is invalid!')
+  if (!isCompletedValid(completed)) return res.send('Completed is invalid!')
 
   const { id } = req.params
 
